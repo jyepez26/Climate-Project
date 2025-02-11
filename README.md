@@ -8,7 +8,17 @@ I gathered my data from the climate.gov website, where I downloaded csv files of
 Here is some information about the dataset:
 
 ## Data Cleaning
-My first step was to iterate through all the different zip files of csv files and load them into one large pandas dataframe. In order to be able to iterate through the files using a simple f string, I had to generalize them, which I accomplished through shortening the unique identifier of about 8 characters at the end of each file name. Once I cleaned up the file names, I was then able to load them all into a large pandas dataframe through iteration. My next step was to drop unnecessary columns from the dataframe. 
+My first step was to iterate through all the different zip files of csv files and load them into one large pandas dataframe. In order to be able to iterate through the files using a simple f string, I had to generalize them, which I accomplished through shortening the unique identifier of about 8 characters at the end of each file name. Once I cleaned up the file names, I was then able to load them all into a large pandas dataframe through iteration. 
+
+Now that we have the rough dataset loaded into a pandas dataframe, our next step is to drop unnecessary columns: `YEAR`, `MONTH_NAME`, `BEGIN_DATE_TIME`, `END_DATE_TIME`.
+We can drop these columns because they are repititve of other time data contained in the dataset. However, these other columns need to be formatted properly into one DateTime column. To do so we use datetime and timedelta objects to combine the `BEGIN_YEARMONTH`, `BEGIN_DAY`, and `BEGIN_TIME` columns as well as the `END_YEARMONTH`, `END_DAY`, and `END_TIME` into `BEGIN_DATETIME` and `END_DATETIME` respectively.
+
+Now, the first few columns and rows of our dataframe will look like this:
+
+## Exploratory Data Analysis
+### Univariate Analysis
+
+### Bivariate Analysis
 
 ```
 Woah, look at this cool code: System.out.print(hello world)
