@@ -19,7 +19,7 @@ Now, the first few columns and rows of our dataframe will look like this:
 ### Univariate Analysis
 I first wanted to see how the magintude of extreme weather events changed over time. There was a clear positive trend in the average magnitude from 1980 until the present. However, this could be a result of difference in volume, so it is hard to be completely sure this trend is correct.
 <iframe
-  src="year_vs_magnitude_plot.html"
+  src="assets/year_vs_magnitude_plot.html"
   width="800"
   height="600"
   frameborder="0"
