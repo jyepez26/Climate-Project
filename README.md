@@ -25,6 +25,22 @@ I first wanted to see how the magintude of extreme weather events changed over t
   frameborder="0"
 ></iframe>
 
+Next, I looked at the different types of extreme weather events. My first thought when exploring this was which events were the most common and which were the least common. This is important to look at in order to better understand the distibution of the data. First, I plotted a bar chart representing the count of every single weather event in the dataset.
+<iframe
+  src="assets/event_type_count_plot.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+However, from this I observed that the top few events dominated the count, and anything outside the top 10-20 most popular events were quite infrequent. Therefore, I made a new plot just looking at the count of the top 10 most common weather events to get a better sense of their count.
+<iframe
+  src="assets/top10_event_type_count_plot.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
+
 ### Bivariate Analysis
 
 ```
