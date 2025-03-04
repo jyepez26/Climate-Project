@@ -13,6 +13,8 @@ My first step was to iterate through all the different zip files of csv files an
 Now that we have the rough dataset loaded into a pandas dataframe, our next step is to drop unnecessary columns: `YEAR`, `MONTH_NAME`, `BEGIN_DATE_TIME`, `END_DATE_TIME`.
 We can drop these columns because they are repititve of other time data contained in the dataset. However, these other columns need to be formatted properly into one DateTime column. To do so we use datetime and timedelta objects to combine the `BEGIN_YEARMONTH`, `BEGIN_DAY`, and `BEGIN_TIME` columns as well as the `END_YEARMONTH`, `END_DAY`, and `END_TIME` into `BEGIN_DATETIME` and `END_DATETIME` respectively.
 
+Next, I found that the values in the `DAMAGE_PROPERTY` column were not floats, but strings formatted such as '150K' or '100M' instead. Therefore, I used a function and mapping to convert these values into their respective float values.
+
 Now, the first few columns and rows of our dataframe will look like this:
 
 ## Exploratory Data Analysis
@@ -42,6 +44,7 @@ However, from this I observed that the top few events dominated the count, and a
 
 
 ### Bivariate Analysis
+I next moved on to looking into some of the relationships between mutliple columns.
 
 ```
 Woah, look at this cool code: System.out.print(hello world)
