@@ -45,6 +45,13 @@ However, from this I observed that the top few events dominated the count, and a
 
 ### Bivariate Analysis
 I next moved on to looking into some of the relationships between mutliple columns.
+I first wanted to figure out the most destructive events. Therefore, I plotted the average damage of each type of event and took the top 10 most destructive event types to display in the plot. These findings show that tornadoes, TSTM (low risk thunderstorm) wind, and hail caused the most damage by a long amount.
+<iframe
+  src="assets/avg_damage_by_event_plot.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 
 ```
 Woah, look at this cool code: System.out.print(hello world)
