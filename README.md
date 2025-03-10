@@ -3,9 +3,27 @@
 ## Introduction
 In this project, I will be researching extreme weather events in order to find trends, conduct a hypothesis test, and create a predictive model for future weather events.
 
-I gathered my data from the climate.gov website, where I downloaded csv files of severe storms and extreme events from 1950-2024. Here is the url of the base website: https://www.climate.gov/maps-data/dataset/severe-storms-and-extreme-events-data-table
+I gathered my data from the climate.gov website, where I downloaded csv files of severe storms and extreme events from 1950-2024. However, due to high volume I am only using data from 1980-2024. Here is the url of the base website: https://www.climate.gov/maps-data/dataset/severe-storms-and-extreme-events-data-table
 
-Here is some information about the dataset:
+The data are collected by the National Weather Service. Weather offices detect the events by using instruments and visual observations, as well as receiving information from storm spotters (people who call in to report severe weather events). Tornadoes, high wind speeds, and storm cell data are collected using radar. Here are the descriptions of some of the relevant columns in the dataset to be used in my project:
+| Column                    | Description                                                              |
+|---------------------------|--------------------------------------------------------------------------|
+| `'YEAR'`                  | Year of the event                                                      |
+| `'EPISODE_ID'`            | ID assigned by NWS to denote the storm episode; Episodes may contain multiple Events   |
+| `'EVENT_ID'`           | ID assigned by NWS for each individual storm event contained within a storm episode                |
+| `'STATE'`        | The state name where the event occurred |
+| `'STATE_FIPS'`      | A unique number (State Federal Information Processing Standard) assigned to the county by the National Institute for Standards and Technology (NIST) |
+| `'EVENT_TYPE'`         | Type of extreme weather event. Includes only types listed in Table 1 of Section 2.1.1 of NWS Directive 10-1605  |
+| `'CZ_FIPS'`     | The county FIPS number is a unique number assigned to the county by the National Institute for Standards and Technology (NIST) or NWS Forecast Zone Number                               |
+| `'WFO'`     | The National Weather Service Forecast Office’s area of responsibility (County Warning Area) in which the event occurred  |
+| `'BEGIN_DATE_TIME'` | Start of event datetime; MM/DD/YYYY hh:mm:ss (24 hour time usually in LST)               |
+| `'END_DATE_TIME'` | End of event datetime; MM/DD/YYYY hh:mm:ss (24 hour time usually in LST)                |
+| `'INJURIES_DIRECT'`        | The number of injuries directly caused by the weather event                      |
+| `'DEATHS_DIRECT'`       | The number of deaths directly caused by the weather event         |
+| `'DAMAGE_PROPERTY'`        | The estimated amount of damage to property incurred by the weather event (e.g. 10.00K = $10,000; 10.00M = $10,000,000)               |
+| `'MAGNITUDE'`    | The measured extent of the magnitude type ~ only used for wind speeds (in knots) and hail size (in inches to the hundredth)           |
+| `'BEGIN_LOCATION'`    | The name of city, town or village from which the range is calculated and the azimuth is determined   |
+
 
 ## Data Cleaning
 My first step was to iterate through all the different zip files of csv files and load them into one large pandas dataframe. In order to be able to iterate through the files using a simple f string, I had to generalize them, which I accomplished through shortening the unique identifier of about 8 characters at the end of each file name. Once I cleaned up the file names, I was then able to load them all into a large pandas dataframe through iteration. 
