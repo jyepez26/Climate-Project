@@ -1,8 +1,8 @@
 # Climate-Project
 <iframe
   src="assets/hurricane_image.jpg"
-  width="800"
-  height="500"
+  width="1000"
+  height="600"
   frameborder="0"
 ></iframe>
 ## Introduction
