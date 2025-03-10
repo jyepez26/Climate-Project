@@ -1,5 +1,12 @@
 # Climate-Project
 
+<iframe
+  src="assets/hurricane_image.jpg"
+  width="1000"
+  height="1000"
+  frameborder="0"
+></iframe>
+
 ## Introduction
 In this project, I will be researching extreme weather events in order to find trends, conduct a hypothesis test, and create a predictive model for future weather events.
 
