@@ -55,6 +55,36 @@ I first wanted to figure out the most destructive events. Therefore, I plotted t
 
 I also explored the relationship between columns `MAGNITUDE` and `INJURIES_DIRECT` expecting to see a positive correlation between the two--as the magnitude of the event increased so would the amount of injuries caused directly by the extreme weather event. However, the results surprised me: there was no noticeable correlation! In fact, there seemed to be some events reported with more injuries for the events with lower magnitudes. Not enough for a negative correlation, but still an interesting observation.
 
+## Hypothesis Testing
+Hurricanes are a prevalent event in our dataset. Climate change is proven to significantly impact the intensity and
+speed of hurricanes! We want to test if our data aligns with this fact and follows these scientifically proven trends. We will measure
+the change in speed which is proven to actually decrease due to climate change, which leads to a longer duration of the hurricane
+and therefore more time to create damage.
+Here are our parameters for our hypothesis test:
+#### Null Hypothesis: There is no significant change in the duration of hurricanes over the past 50 years.
+#### Alternative Hypothesis: The duration of hurricanes has increased significantly over the past 50 years.
+#### Test statistic: Difference in means of hurricane duration (1996-2010) and (2010-2024).
+#### Statistically significant p-value: 0.05
+
+For my hypothesis test, I randomly shuffled the `YEAR` column 1000 times, each time calculation an observation in the same way I did originally. This
+allows for me to see if our observed value is significant or if any random simulation would produce a similar value. Here is my plotted histogram of the observed values from my simulation compared to my observed value from the original data:
+<iframe
+  src="assets/avg_damage_by_event_plot.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
+After conducting this hypothesis test, I found some shocking results. My data actually proved the opposite of what I was trying to show! With a
+p value of 1.0, it turns out that my observed value was statistically significant, but in the wrong way. Which means that my test is essentially
+saying that the duration of hurricanes has _decreased_ over time rather than increased which does not align with the fact that climate change
+is proven to decrease the speed of hurricanes which _increases_ their duration. Therefore, while I cannot conclude anything for certain from this
+data, I am going to speculate that I did not have enough data in my dataset to have proper evidence to conduct this climate analysis.
+
 ```
-Woah, look at this cool code: System.out.print(hello world)
+Unfortunately, the dataset I was using in this was not complete enough to use for a trustworthy data analysis, and I had to cut my project short.
+This project did give me good practice with data cleaning, as the dataset was very messy when I first received and I was able to make it suitable
+for analysis, as well as practice with data exploration. I did get practice with hypothesis testing additionally, but through it I discovered
+that my dataset was problematic. Therefore, I am stopping short and not using this data to create a predictive model like I planned, since
+I don't believe that it will be a fair and accurate model. On to the next project!
 ```
