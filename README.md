@@ -88,7 +88,7 @@ Here are our parameters for our hypothesis test:
 For my hypothesis test, I randomly shuffled the `YEAR` column 1000 times, each time calculation an observation in the same way I did originally. This
 allows for me to see if our observed value is significant or if any random simulation would produce a similar value. Here is my plotted histogram of the observed values from my simulation compared to my observed value from the original data:
 <iframe
-  src="assets/avg_damage_by_event_plot.html"
+  src="assets/hyp_test_plot.html"
   width="800"
   height="600"
   frameborder="0"
